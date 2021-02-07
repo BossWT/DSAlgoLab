@@ -1,0 +1,11 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "/Users/boss_wt/Documents/Programming/CU/DSAlgoLab/Lab02 LinkedList/Lab02_Student.jar"
+        ],
+        "exclude": [
+            "lib/Lab02_Student.jar"
+        ]
+    }
+}
