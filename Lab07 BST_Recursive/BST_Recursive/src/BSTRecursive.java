@@ -196,8 +196,6 @@ public class BSTRecursive {
 	BSTNode res = new BSTNode(0);
 
 	public int nextOf(BSTNode n, int v) {
-		if (n == null)
-			return v;
 		if (n.data == v) {
 			if (n.right != null) {
 				TreeIterator tItr = (TreeIterator) findMin(n.right);
