@@ -198,8 +198,10 @@ public class BSTRecursive {
 	public int nextOf(BSTNode n, int v) {
 		if (n.data == v) {
 			if (n.right != null) {
-				TreeIterator tItr = (TreeIterator) findMin(n.right);
-				return tItr.currentNode.data;
+				BSTNode temp = n.right;
+				while (temp.left != null)
+					temp = temp.left;
+				return temp.data;
 			}
 		} else if (n.data > v) {
 			res = n;
