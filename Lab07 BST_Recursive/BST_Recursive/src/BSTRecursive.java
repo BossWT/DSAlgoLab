@@ -196,9 +196,7 @@ public class BSTRecursive {
 	BSTNode res = new BSTNode(0);
 
 	public int nextOf(BSTNode n, int v) {
-		TreeIterator maxItr = (TreeIterator) findMax();
-		int max = maxItr.currentNode.data;
-		if (v >= max)
+		if (n == null)
 			return v;
 		if (n.data == v) {
 			if (n.right != null) {
@@ -213,7 +211,10 @@ public class BSTRecursive {
 			if (n.right != null)
 				return nextOf(n.right, v);
 		}
-		return res.data;
+		if (v > res.data)
+			return v;
+		else
+			return res.data;
 	}
 
 }
